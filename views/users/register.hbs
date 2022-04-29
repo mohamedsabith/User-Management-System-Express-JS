@@ -1,0 +1,73 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/register.css" />
+</head>
+<div class="login-form">
+  <form action="/register" method="post" id="registerform">
+    <h2 style="color: black;">Registration Form</h2>
+    <p>Please fill in this form to create an account!</p>
+    <p style="color: red;">{{signupErrorMsge}}</p>
+    <hr />
+    <div class="form-group">
+      <input
+        type="text"
+        class="form-control"
+        name="username"
+        placeholder="Username"
+        id="username"
+        required="required"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="Email"
+        id="email"
+        required="required"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        name="password"
+        placeholder="Password"
+        id="password"
+        required="required"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        type="password"
+        class="form-control"
+        name="conform_password"
+        placeholder="Conform Password"
+        id="conform_password"
+        required="required"
+      />
+    </div>
+    <div class="form-group">
+      <label class="form-check-label"><input
+          type="checkbox"
+          required="required"
+        />
+        I accept the
+        <a href="#">Terms of Use</a>
+        &amp;
+        <a href="#">Privacy Policy</a></label>
+    </div>
+    <div class="form-group">
+      <button
+        type="submit"
+        class="btn btn-primary btn-lg"
+      >Register</button>
+    </div>
+  </form>
+  <div class="login-signup">
+    <span class="text" style="margin-left: 90px; color: #fff;">Already a member?
+      <a href="/" class="text signup-link" style="color: #fff;">Login now</a>
+    </span>
+  </div>
+</div>
+

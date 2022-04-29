@@ -1,0 +1,37 @@
+ <head>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/stylesheets/adminHome.css">
+ </head>
+ <body style="background-color: #0a3bf0;">
+{{#each details}}
+     <div class="container">
+     <div class="card mt-5 active">
+         <div class="card-body ">
+             <div class="row">
+                 <div class="col-12 ">
+                     <h5 class="card-title "><b>email: {{this.email}}</b></h5>
+                     <h5 class="card-title "><b>username: {{this.username}}</b></h5>
+                 </div>
+                 <div class="col">
+                     <h6 class="card-subtitle mb-2 text-muted">
+                         <p class="font-weight-bold"  style="color: #4287f5">  <span class="font-weight-bold"></span><i class="bi bi-calendar-month"></i> Created at<span class="font-weight-bold">: {{this.Created_at}}</span></p>
+                         <p class="font-weight-bold" style="color:#0a3bf0;"><i class="bi bi-person-circle"></i> Status:  <span>{{this.status}}</span></p>
+                     </h6>
+                 </div>
+             </div>
+         </div>
+         <div class="card-footer bg-white px-0">
+             <div class="row d-flex">
+                 <div class="col-md-auto pl-5 d-flex">
+                     <button type="button" class="btn btn-outline-primary w-50"><a class="link" href="/admin/pending/{{details._id}}" style="color: black; text-decoration: none;">Pending</a></button>
+                     <button type="button" class="btn btn-outline-success ml-2 w-50"><a href="/admin/active/{{this._id}}" style="color: black; text-decoration: none;">Active</a></button>
+                     <button type="button" class="btn btn-outline-secondary ml-2 w-50"><a href="/admin/block/{{this._id}}" style="color: black; text-decoration: none;">Block</a></button>
+                      <button type="button" class="btn btn-outline-danger ml-2 w-50"><a href="/admin/delete/{{this._id}}" style="color: black; text-decoration: none;">Delete</a></button>
+                       <button type="button" class="btn btn-outline-dark ml-2 w-50"><a  href="/admin/edit/{{this._id}}" style="color: black; text-decoration: none;">Edit</a></button>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ {{/each}}
+ </body>
