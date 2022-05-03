@@ -1,9 +1,3 @@
-const { reject } = require('bcrypt/promises')
-const req = require('express/lib/request')
-const { status } = require('express/lib/response')
-const res = require('express/lib/response')
-const async = require('hbs/lib/async')
-const bcrypt = require("bcrypt");
 const userModel = require('../Models/userSchema')
 const uservalidation = require('../Validations/userValidation')
 

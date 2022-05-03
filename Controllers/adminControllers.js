@@ -1,8 +1,7 @@
-const { reject, promise } = require("bcrypt/promises")
-const async = require("hbs/lib/async")
 const adminModel = require('../Models/adminSchema')
 const userModal = require('../Models/userSchema')
 const uservalidation = require('../Validations/userValidation')
+
 //admin login
 const adminLogin = (data) =>{
    return new Promise(async(resolve,reject)=>{

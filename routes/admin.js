@@ -1,5 +1,4 @@
 var express = require('express');
-const async = require('hbs/lib/async');
 var router = express.Router();
 var session = require('express-session')
 const userModal = require('../Models/userSchema')
@@ -44,6 +43,7 @@ router.get('/pending/:id',(req,res)=>{
     })
     
 })
+
 router.get('/active/:id',(req,res)=>{
     let id = req.params.id
     activationAccount(id).then((result)=>{
@@ -53,6 +53,7 @@ router.get('/active/:id',(req,res)=>{
         console.log(err);
     })
 })
+
 router.get('/block/:id',(req,res)=>{
     let id = req.params.id
     blockAccount(id).then((result)=>{

@@ -23,7 +23,9 @@ const userSchema=new Mongoose.Schema({
         default:"Pending"
     }
 })
+
 userSchema.index({username:"text",email:"text"})
+
 const userModel = Mongoose.model("User", userSchema);
 
-module.exports=userModel
+module.exports=userModel;
